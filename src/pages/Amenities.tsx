@@ -1,9 +1,8 @@
-
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { Spa, Dumbbell, Pool, Yoga, Utensils, Wine, Coffee, Clock, Car, Plane, Car as CarIcon, MapPin, Waves, Users, Music, BookOpen } from "lucide-react";
+import { Flower2, Dumbbell, Waves, StretchHorizontal, Utensils, Wine, Coffee, Clock, Car, Plane, MapPin, Users, Music, BookOpen } from "lucide-react";
 
 export default function Amenities() {
   const { t } = useLanguage();
@@ -16,10 +15,30 @@ export default function Amenities() {
   // Helper function to get the appropriate icon for each amenity
   const getIcon = (categoryName: string, index: number) => {
     const icons = {
-      wellness: [<Spa key={0} />, <Dumbbell key={1} />, <Pool key={2} />, <Yoga key={3} />],
-      dining: [<Utensils key={0} />, <Coffee key={1} />, <Wine key={2} />, <Clock key={3} />],
-      services: [<Clock key={0} />, <Plane key={1} />, <CarIcon key={2} />, <MapPin key={3} />],
-      entertainment: [<Waves key={0} />, <Users key={1} />, <Music key={2} />, <BookOpen key={3} />]
+      wellness: [
+        <Flower2 key={0} />,          // replaced Spa
+        <Dumbbell key={1} />,
+        <Waves key={2} />,            // replaced Pool
+        <StretchHorizontal key={3} /> // replaced Yoga
+      ],
+      dining: [
+        <Utensils key={0} />,
+        <Coffee key={1} />,
+        <Wine key={2} />,
+        <Clock key={3} />
+      ],
+      services: [
+        <Clock key={0} />,
+        <Plane key={1} />,
+        <Car key={2} />,
+        <MapPin key={3} />
+      ],
+      entertainment: [
+        <Waves key={0} />,
+        <Users key={1} />,
+        <Music key={2} />,
+        <BookOpen key={3} />
+      ]
     };
     
     return icons[categoryName as keyof typeof icons]?.[index] || <Coffee />;
