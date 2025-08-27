@@ -92,9 +92,9 @@ export default function Contact() {
                     <div>
                       <h3 className="font-semibold mb-1">{t.contact.address}</h3>
                       <p className="text-muted-foreground">
-                        123 Seaside Boulevard<br />
-                        Costa Bella, 12345<br />
-                        Italy
+                        123 Nairobi <br />
+                        Ngong road, Kilimani<br />
+                        00100 Nairobi, Kenya
                       </p>
                     </div>
                   </div>
@@ -105,8 +105,8 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="font-semibold mb-1">{t.contact.phone}</h3>
-                      <p className="text-muted-foreground">+39 123 4567 890</p>
-                      <p className="text-muted-foreground">+39 098 7654 321 (Reservations)</p>
+                      <p className="text-muted-foreground">+254 780295761</p>
+                      <p className="text-muted-foreground">+254 112432106(Reservations)</p>
                     </div>
                   </div>
                   
